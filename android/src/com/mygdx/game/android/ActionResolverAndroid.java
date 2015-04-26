@@ -21,16 +21,14 @@ public class ActionResolverAndroid implements ActionResolver {
         handler.post(new Runnable() {
             @Override
             public void run() {
-                int a;
                 ConnectivityManager connManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo mWifi = connManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
 
                 if (mWifi.isConnected()) {
-                    a=1;
-                }else{
-                    a=0;
+                    Toast.makeText(context, "There is network connection!", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(context, "No network connection!", Toast.LENGTH_SHORT).show();
                 }
-                Toast.makeText(context, "No network connection!", Toast.LENGTH_SHORT).show();
 
 
             }

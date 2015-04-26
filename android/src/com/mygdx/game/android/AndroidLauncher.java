@@ -15,6 +15,5 @@ public class AndroidLauncher extends AndroidApplication {
         actionResolverAndroid = new ActionResolverAndroid(this);
 		AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
         initialize(new MyGdxGame(actionResolverAndroid), config);
-		//initialize(new MyGdxGame(), config);
 	}
 }
